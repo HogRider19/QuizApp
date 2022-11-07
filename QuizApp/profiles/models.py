@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Q
 
 
 class Group(models.Model):
@@ -32,8 +31,8 @@ class Group(models.Model):
 class Profile(models.Model):
     """Модель расширяюшая модель User"""
     user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
-    group = models.ForeignKey(Group, related_query_name='profiles',
-                                blank=True, null=True, on_delete=models.SET_NULL)
+    group = models.ForeignKey(Group, related_name='profiles',
+                        blank=True, null=True, on_delete=models.SET_NULL, default=None)
     is_teacher = models.BooleanField(default=False)
 
     def __str__(self) -> str:

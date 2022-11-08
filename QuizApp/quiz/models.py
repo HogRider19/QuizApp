@@ -1,5 +1,6 @@
 from django.db import models
 from profiles.models import Group, Profile
+from django.db.models import Q
 
 
 class Cource(models.Model):
@@ -63,7 +64,7 @@ class Test(models.Model):
     theory = models.TextField(blank=True, null=True)
     questions = models.ManyToManyField(Question, related_name='test')
     success_percent = models.FloatField(default=50.0)
-    authors = models.ManyToManyField(Profile, related_name='compiled_tests')
+    authors = models.ManyToManyField(Profile, related_name='compiled_tests', blank=True)
     cources = models.ManyToManyField(Cource, related_name='tests')
     at_start = models.DateTimeField(blank=True, null=True)
     at_finish = models.DateTimeField(blank=True, null=True)

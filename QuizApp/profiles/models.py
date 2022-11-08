@@ -30,16 +30,25 @@ class Group(models.Model):
 
 class Profile(models.Model):
     """Модель расширяюшая модель User"""
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    middle_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
     user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
     group = models.ForeignKey(Group, related_name='profiles',
                         blank=True, null=True, on_delete=models.SET_NULL, default=None)
     is_teacher = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f"{self.user.first_name} {self.user.last_name} - {'Учитель' if self.is_teacher else self.group}"
+        return f"{self.first_name} {self.last_name} - {'Учитель' if self.is_teacher else self.group}"
 
     class Meta:
         verbose_name = 'Профиль'
         verbose_name_plural = 'Профили'
+        constraints = [
+            models.UniqueConstraint(
+                fields=['email'], name="unique_email_profile"
+            )
+        ]
 
 

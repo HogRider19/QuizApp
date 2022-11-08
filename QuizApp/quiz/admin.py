@@ -1,16 +1,34 @@
 from django.contrib import admin
-from .models import Cource, CourceGroup
-from profiles.models import Profile, Group
+from . import models
 
 
-class CourceGroupAdmin(admin.TabularInline):
-    model = CourceGroup
+class CourceGroupInLine(admin.TabularInline):
+    model = models.CourceGroup
     extra = 0
 
-@admin.register(Cource)
+class QuestionAnswerInLine(admin.TabularInline):
+    model = models.Answer
+    extra = 4
+
+@admin.register(models.Cource)
 class CourceAdmin(admin.ModelAdmin):
-    model = Cource
+    model = models.Cource
     inlines = [
-        CourceGroupAdmin,
+        CourceGroupInLine,
     ]
+
+@admin.register(models.Answer)
+class GroupAdmin(admin.ModelAdmin):
+    model = models.Answer
+
+@admin.register(models.Question)
+class GroupAdmin(admin.ModelAdmin):
+    model = models.Question
+    inlines = [
+        QuestionAnswerInLine,
+    ]
+
+@admin.register(models.Test)
+class GroupAdmin(admin.ModelAdmin):
+    model = models.Test
 

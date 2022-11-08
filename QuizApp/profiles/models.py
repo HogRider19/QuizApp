@@ -36,7 +36,7 @@ class Profile(models.Model):
     is_teacher = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f"{self.user.first_name} {self.user.last_name} - {self.group}"
+        return f"{self.user.first_name} {self.user.last_name} - {'Учитель' if self.is_teacher else self.group}"
 
     class Meta:
         verbose_name = 'Профиль'

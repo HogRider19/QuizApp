@@ -32,10 +32,11 @@ class Question(models.Model):
     """Модель вопроса из теста"""
     photo = models.ImageField(upload_to='questionImages', blank=True, null=True)
     description = models.TextField(max_length=5000)
-    authors = models.ManyToManyField(Profile, related_name='compiled_questions')
+    authors = models.ManyToManyField(Profile, related_name='compiled_questions', blank=True)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f"{self.description[:60]}..." if len(self.description
+                                                ) > 60 else f"{self.description}"
 
     class Meta:
         verbose_name = 'Вопрос'
@@ -44,8 +45,8 @@ class Question(models.Model):
 class Answer(models.Model):
     """Модель ответов к вопросу"""
     description = models.TextField(max_length=1000)
-    question = models.ForeignKey(Profile, related_name='answers', on_delete=models.CASCADE)
-    is_right = models.BooleanField(default=True)
+    question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)
+    is_right = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"{self.description[:60]}..." if len(self.description
@@ -61,7 +62,9 @@ class Test(models.Model):
     description = models.TextField(max_length=5000, blank=True, null=True)
     theory = models.TextField(blank=True, null=True)
     questions = models.ManyToManyField(Question, related_name='test')
-    authors = models.ManyToManyField(Question, related_name='compiled_tests')
+    success_percent = models.FloatField(default=50.0)
+    authors = models.ManyToManyField(Profile, related_name='compiled_tests')
+    cources = models.ManyToManyField(Cource, related_name='tests')
     at_start = models.DateTimeField(blank=True, null=True)
     at_finish = models.DateTimeField(blank=True, null=True)
 

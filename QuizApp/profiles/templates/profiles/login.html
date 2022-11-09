@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h3>Login</h3>
+    {{error}}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Отпаравить</button>
+    </form>
+{% endblock %}

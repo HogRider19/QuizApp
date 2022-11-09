@@ -6,6 +6,7 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('profile/', include('profiles.urls')),
+    path('', include('quiz.urls')),
 ]
 
 urlpatterns += static(

@@ -2,6 +2,7 @@
 
 
 {% block content %}
+<div class="col align-self-center">
     <h3>Login</h3>
     {{error}}
     <form method="post" action="{% url 'login' %}">
@@ -9,4 +10,5 @@
         {{form.as_p}}
         <button>Отпаравить</button>
     </form>
+</div>
 {% endblock %}

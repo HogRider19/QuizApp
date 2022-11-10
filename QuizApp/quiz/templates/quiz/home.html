@@ -5,7 +5,7 @@
 <h1>Главная</h1>
 
 {% for cource in cources %}
-    {{cource.name}}
+    <a href="{% url 'courcedetail' cource.id %}">{{cource.name}}</a>
     <br>
 {% endfor %}
 

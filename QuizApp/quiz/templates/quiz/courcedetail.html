@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>{{cource.name}}</h1>
+    <br>
+
+    {% for test in cource.tests.all %}
+        <a href="{% url 'testdetail' test.id %}"><h3>{{test.name}}</h3></a>
+        ({{test.at_start}} - {{test.at_finish}})
+        <br>
+        <p>{{test.description|truncatechars:300}}</p>
+    {% endfor %}
+
+{% endblock %}

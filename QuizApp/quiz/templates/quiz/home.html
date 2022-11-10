@@ -3,4 +3,10 @@
 
 {% block content %}
 <h1>Главная</h1>
+
+{% for cource in cources %}
+    {{cource.name}}
+    <br>
+{% endfor %}
+
 {% endblock %}

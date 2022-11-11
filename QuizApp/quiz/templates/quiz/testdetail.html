@@ -6,8 +6,13 @@
 <br>
 <p>{{test.description}}</p>
 <br>
+Тест откроется: {{test.at_start}}
+<br>
+Статус теста: {{status}}
+<br>
 <form action="" method="post">
     {% csrf_token %}
     <button>Начать тестирование</button>
 </form>
+<a href="">Вернуться к курсу</a>
 {% endblock %}

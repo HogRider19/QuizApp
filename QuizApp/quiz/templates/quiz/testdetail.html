@@ -5,4 +5,9 @@
 ({{test.at_start}} - {{test.at_finish}})
 <br>
 <p>{{test.description}}</p>
+<br>
+<form action="" method="post">
+    {% csrf_token %}
+    <button>Начать тестирование</button>
+</form>
 {% endblock %}

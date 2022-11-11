@@ -64,6 +64,8 @@ class Test(models.Model):
     theory = models.TextField(blank=True, null=True)
     questions = models.ManyToManyField(Question, related_name='test')
     success_percent = models.FloatField(default=50.0)
+    allotted_time = models.PositiveIntegerField(default=10)
+    attempts_number = models.PositiveIntegerField(default=3)
     authors = models.ManyToManyField(Profile, related_name='compiled_tests', blank=True)
     cources = models.ManyToManyField(Cource, related_name='tests')
     at_start = models.DateTimeField(blank=True, null=True)

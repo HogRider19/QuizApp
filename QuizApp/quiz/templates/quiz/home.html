@@ -3,10 +3,13 @@
 
 {% block content %}
 <h1>Главная</h1>
-
+<br>
+{% if not user.profile.is_teacher %}
+<h3>Курсы для прохождения:</h3>
 {% for cource in cources %}
     <a href="{% url 'courcedetail' cource.id %}">{{cource.name}}</a>
     <br>
 {% endfor %}
+{% endif %}
 
 {% endblock %}

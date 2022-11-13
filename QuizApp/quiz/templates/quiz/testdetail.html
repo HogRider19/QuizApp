@@ -6,13 +6,23 @@
 <br>
 <p>{{test.description}}</p>
 <br>
-Тест откроется: {{test.at_start}}
+Промежуток выполнения теста: {{test.at_start}} - {{test.at_finish}}
 <br>
 Статус теста: {{status}}
 <br>
+{% if status == 'open' %}
 <form action="" method="post">
     {% csrf_token %}
     <button>Начать тестирование</button>
 </form>
+{% endif %}
+{% if status == 'close' %}
+    Тест закрылся: {{test.at_finish}}
+{% endif %}
+{% if status == 'wait' %}
+    Тест будет доступен: {{test.at_start}}
+{% endif %}
+
+<br>
 <a href="">Вернуться к курсу</a>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 
 
 class Group(models.Model):
@@ -28,27 +28,21 @@ class Group(models.Model):
         verbose_name_plural = 'Группы'
 
 
-class Profile(models.Model):
-    """Модель расширяюшая модель User"""
-    first_name = models.CharField(max_length=100, blank=True, null=True)
+class User(AbstractUser):
     middle_name = models.CharField(max_length=100, blank=True, null=True)
-    last_name = models.CharField(max_length=100, blank=True, null=True)
-    email = models.EmailField(blank=True, null=True)
-    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
     group = models.ForeignKey(Group, related_name='profiles',
-                        blank=True, null=True, on_delete=models.SET_NULL, default=None)
+                            blank=True, null=True, on_delete=models.SET_NULL, default=None)
     is_teacher = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name} - {'Учитель' if self.is_teacher else self.group}"
 
     class Meta:
-        verbose_name = 'Профиль'
-        verbose_name_plural = 'Профили'
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
         constraints = [
             models.UniqueConstraint(
                 fields=['email'], name="unique_email_profile"
             )
         ]
-
 

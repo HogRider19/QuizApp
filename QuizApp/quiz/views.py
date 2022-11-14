@@ -5,7 +5,6 @@ from .models import Cource, Test
 from django.contrib.auth.mixins import UserPassesTestMixin
 from .permissions import OnlyAuthenticatedPermission
 from typing import *
-from .utils import get_test_status
 
 
 class HomePage(OnlyAuthenticatedPermission, generic.ListView):
@@ -14,7 +13,7 @@ class HomePage(OnlyAuthenticatedPermission, generic.ListView):
     context_object_name = 'cources'
 
     def get_queryset(self):
-        return self.request.user.profile.group.cources.all()
+        return self.request.user.group.cources.all()
 
 class CourceDetailView(OnlyAuthenticatedPermission, generic.DetailView):
     model = Cource
@@ -28,7 +27,7 @@ class TestDetailView(OnlyAuthenticatedPermission, generic.DetailView):
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        context.update({'status': get_test_status(context)})
+        context.update({'status': context.test.get_test_status()})
         return context
 
 

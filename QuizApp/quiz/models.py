@@ -1,13 +1,15 @@
 from django.db import models
-from profiles.models import Group, Profile
+from profiles.models import Group
 from django.db.models import Q
+from datetime import datetime
+from django.conf import settings
 
 
 class Cource(models.Model):
     """Модель обучающего курса"""
     name = models.CharField(max_length=250)
     groups = models.ManyToManyField(Group, related_name='cources', through='CourceGroup')
-    teachers = models.ManyToManyField(Profile, related_name='author_courses', blank=True)
+    teachers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='author_courses', blank=True)
 
     def __str__(self) -> str:
         return f"{self.name}"
@@ -33,7 +35,7 @@ class Question(models.Model):
     """Модель вопроса из теста"""
     photo = models.ImageField(upload_to='questionImages', blank=True, null=True)
     description = models.TextField(max_length=5000)
-    authors = models.ManyToManyField(Profile, related_name='compiled_questions', blank=True)
+    authors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='compiled_questions', blank=True)
 
     def __str__(self) -> str:
         return f"{self.description[:60]}..." if len(self.description
@@ -66,10 +68,23 @@ class Test(models.Model):
     success_percent = models.FloatField(default=50.0)
     allotted_time = models.PositiveIntegerField(default=10)
     attempts_number = models.PositiveIntegerField(default=3)
-    authors = models.ManyToManyField(Profile, related_name='compiled_tests', blank=True)
+    authors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='compiled_tests', blank=True)
     cources = models.ManyToManyField(Cource, related_name='tests')
     at_start = models.DateTimeField(blank=True, null=True)
     at_finish = models.DateTimeField(blank=True, null=True)
+
+    def get_test_status(self) -> str:
+        time_now = datetime.datetime.now(self.tzinfo)
+
+        status = None
+        if self.at_start < time_now < self.at_finish:
+            status = 'open'
+        elif time_now < self.at_start:
+            status = 'wait'
+        else:
+            status = 'close'
+
+        return status
 
     def __str__(self) -> str:
         return f"{self.name} - ({self.at_start},{self.at_finish})"
@@ -88,12 +103,12 @@ class QuestionResault(models.Model):
 
 class TestResault(models.Model):
     test = models.ForeignKey(Test, related_name='test_results', on_delete=models.CASCADE)
-    profile = models.ForeignKey(Profile, related_name='profile_results', on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='user_results', on_delete=models.CASCADE)
     question_resaults = models.ManyToManyField(QuestionResault, blank=True)
     passed = models.BooleanField(blank=True, null=True, default=False)
 
     def __str__(self) -> str:
-        return f"{self.test} - {self.profile.first_name},{self.profile.last_name}"
+        return f"{self.test} - {self.user.first_name},{self.user.last_name}"
 
     class Meta:
         verbose_name = 'Результат Теста'

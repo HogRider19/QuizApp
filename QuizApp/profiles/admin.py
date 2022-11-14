@@ -1,3 +1,4 @@
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib import admin
 from . import models
 
@@ -6,8 +7,9 @@ from . import models
 class GroupAdmin(admin.ModelAdmin):
     model = models.Group
 
-@admin.register(models.Profile)
-class GroupAdmin(admin.ModelAdmin):
-    model = models.Profile
+@admin.register(models.User)
+class UserAdmin(BaseUserAdmin):
+    model = models.User
+
 
 

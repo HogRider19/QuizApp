@@ -41,7 +41,7 @@ class User(AbstractUser):
 
     def get_courses(self):
         if self.group:
-            return self.group.cources.all()
+            return self.group.courses.all()
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name} - {'Учитель' if self.is_teacher else f'Ученик {self.group}'}"

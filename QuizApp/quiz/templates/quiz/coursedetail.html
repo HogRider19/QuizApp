@@ -2,10 +2,10 @@
 
 
 {% block content %}
-    <h1>{{cource.name}}</h1>
+    <h1>{{course.name}}</h1>
     <br>
 
-    {% for test in cource.tests.all %}
+    {% for test in course.tests.all %}
         <a href="{% url 'testdetail' test.id %}"><h3>{{test.name}}</h3></a>
         ({{test.at_start}} - {{test.at_finish}})
         <br>

@@ -5,10 +5,10 @@ from datetime import datetime
 from django.conf import settings
 
 
-class Cource(models.Model):
+class course(models.Model):
     """Модель обучающего курса"""
     name = models.CharField(max_length=250)
-    groups = models.ManyToManyField(Group, related_name='cources', through='CourceGroup')
+    groups = models.ManyToManyField(Group, related_name='courses', through='courseGroup')
     teachers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='author_courses', blank=True)
 
     def __str__(self) -> str:
@@ -18,14 +18,14 @@ class Cource(models.Model):
         verbose_name = 'Курс'
         verbose_name_plural = 'Курсы'
 
-class CourceGroup(models.Model):
-    """Промежуточная таблица для модеоей Cource и Group"""
-    cource = models.ForeignKey(Cource, on_delete=models.CASCADE)
+class courseGroup(models.Model):
+    """Промежуточная таблица для модеоей course и Group"""
+    course = models.ForeignKey(course, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
     time_joined = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return f"{self.cource} - {self.group}"
+        return f"{self.course} - {self.group}"
     
     class Meta:
         verbose_name = 'Курс-Группа'
@@ -69,12 +69,12 @@ class Test(models.Model):
     allotted_time = models.PositiveIntegerField(default=10)
     attempts_number = models.PositiveIntegerField(default=3)
     authors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='compiled_tests', blank=True)
-    cources = models.ManyToManyField(Cource, related_name='tests')
+    courses = models.ManyToManyField(course, related_name='tests')
     at_start = models.DateTimeField(blank=True, null=True)
     at_finish = models.DateTimeField(blank=True, null=True)
 
     def get_test_status(self) -> str:
-        time_now = datetime.datetime.now(self.tzinfo)
+        time_now = datetime.now(self.at_start.tzinfo)
 
         status = None
         if self.at_start < time_now < self.at_finish:

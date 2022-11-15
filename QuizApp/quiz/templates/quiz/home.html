@@ -6,8 +6,8 @@
 <br>
 {% if not user.is_teacher %}
 <h3>Курсы для прохождения:</h3>
-{% for cource in cources %}
-    <a href="{% url 'courcedetail' cource.id %}">{{cource.name}}</a>
+{% for course in courses %}
+    <a href="{% url 'coursedetail' course.id %}">{{course.name}}</a>
     <br>
 {% endfor %}
 {% endif %}

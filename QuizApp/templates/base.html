@@ -16,8 +16,11 @@
             {% csrf_token %}
             <button>Выйти</button>
         </form>
+        {% if user.is_teacher %}
+            <a href="{% url 'teacherpage' %}">Страница преподавателя</a>
+        {% endif %}
     {% else %}
-        <a>Войти</a>
+        <a href="{% url 'login' %}">Войти</a>
     {% endif %}
     <br><br>
     {% block content %}{% endblock %}

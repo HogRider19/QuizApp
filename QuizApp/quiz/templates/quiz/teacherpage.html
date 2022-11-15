@@ -2,4 +2,8 @@
 
 
 {% block content %}
+    <h1>Курсы для редактирования:</h1>
+    {% for course in courses %}
+        <a href="">{{course.name}}</a>
+    {% endfor %}
 {% endblock %}

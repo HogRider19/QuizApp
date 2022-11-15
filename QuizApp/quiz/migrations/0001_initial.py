@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Cource',
+            name='course',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=250)),
@@ -76,7 +76,7 @@ class Migration(migrations.Migration):
                 ('at_start', models.DateTimeField(blank=True, null=True)),
                 ('at_finish', models.DateTimeField(blank=True, null=True)),
                 ('authors', models.ManyToManyField(blank=True, related_name='compiled_tests', to=settings.AUTH_USER_MODEL)),
-                ('cources', models.ManyToManyField(related_name='tests', to='quiz.cource')),
+                ('courses', models.ManyToManyField(related_name='tests', to='quiz.course')),
                 ('questions', models.ManyToManyField(related_name='test', to='quiz.question')),
             ],
             options={
@@ -99,11 +99,11 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='CourceGroup',
+            name='courseGroup',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('time_joined', models.DateTimeField(auto_now_add=True)),
-                ('cource', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='quiz.cource')),
+                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='quiz.course')),
                 ('group', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='profiles.group')),
             ],
             options={
@@ -112,12 +112,12 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.AddField(
-            model_name='cource',
+            model_name='course',
             name='groups',
-            field=models.ManyToManyField(related_name='cources', through='quiz.CourceGroup', to='profiles.group'),
+            field=models.ManyToManyField(related_name='courses', through='quiz.courseGroup', to='profiles.group'),
         ),
         migrations.AddField(
-            model_name='cource',
+            model_name='course',
             name='teachers',
             field=models.ManyToManyField(blank=True, related_name='author_courses', to=settings.AUTH_USER_MODEL),
         ),

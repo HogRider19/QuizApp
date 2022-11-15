@@ -13,7 +13,7 @@ class HomePage(OnlyAuthenticatedPermission, generic.ListView):
     context_object_name = 'cources'
 
     def get_queryset(self):
-        return self.request.user.group.cources.all()
+        return self.request.user.get_courses()
 
 class CourceDetailView(OnlyAuthenticatedPermission, generic.DetailView):
     model = Cource

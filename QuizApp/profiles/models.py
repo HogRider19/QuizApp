@@ -18,15 +18,18 @@ class Group(models.Model):
         ('М', 'Магистратура'),
     )
     YEAR_ADMISSION_CHOICES = [(str(r), str(r)) for r in range(1980, (datetime.datetime.now().year+1))]
+    DEPARTMENT_CHOICES = [(str(r), str(r)) for r in range(1, 10)]
+    NUMBER_CHOICES = [(str(r), str(r)) for r in range(1, 9)]
 
     faculty = models.CharField(max_length=1, choices=FACULTY_CHOICES, default='А')
-    number = models.CharField(max_length=2, default='00', unique=True)
+    department = models.CharField(max_length=1, choices=DEPARTMENT_CHOICES, default='0')
+    number = models.CharField(max_length=1, choices=NUMBER_CHOICES, default='0')
     year_admission = models.CharField(max_length=4, choices=YEAR_ADMISSION_CHOICES,
                                      default='2000', verbose_name='Год посткпления')
     study_form = models.CharField(max_length=1, choices=STUDY_FORM_CHOICES, default='Б')
 
     def __str__(self) -> str:
-        return f"{self.faculty}{self.number}{self.year_admission[-1]}{self.study_form}"
+        return f"{self.faculty}{self.department}{self.year_admission[-1]}{self.number}{self.study_form}"
 
     class Meta:
         verbose_name = 'Группа'

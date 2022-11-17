@@ -4,6 +4,7 @@
 {% block content %}
     <h1>Курсы для редактирования:</h1>
     {% for course in courses %}
-        <a href="">{{course.name}}</a>
+        <a href="{% url 'courseedit' course.id %}">{{course.name}}</a>
+        <br>
     {% endfor %}
 {% endblock %}

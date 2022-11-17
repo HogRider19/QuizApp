@@ -125,6 +125,8 @@ AUTH_USER_MODEL = 'profiles.User'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+LOGIN_URL = 'profile/login/'
+
 STATIC_URL = 'static/'
 
 STATIC_DIR = BASE_DIR / 'static'

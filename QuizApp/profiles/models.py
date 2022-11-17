@@ -16,6 +16,7 @@ class Group(models.Model):
         ('Б', 'Бакалавриат'),
         ('С', 'Специалитет'),
         ('М', 'Магистратура'),
+        ('П', 'Повыгение квалификации'),
     )
     YEAR_ADMISSION_CHOICES = [(str(r), str(r)) for r in range(1980, (datetime.datetime.now().year+1))]
     DEPARTMENT_CHOICES = [(str(r), str(r)) for r in range(1, 10)]

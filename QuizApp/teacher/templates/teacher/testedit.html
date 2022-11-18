@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Редактирование теста: {{ test.name }}</h1>
+    {% for question in questions %}
+    <a href="{% url 'questionedit' question.id %}">{{question.description|truncatechars:100}}</a>
+    <br>
+    {% endfor %}
+{% endblock %}

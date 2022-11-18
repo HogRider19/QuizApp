@@ -2,7 +2,7 @@
 
 
 {% block content %}
-    <h1>Редактирование курса: {{ cource.name }}</h1>
+    <h1>Редактирование курса: {{ course.name }}</h1>
 
     {% for test in tests %}
     <a href="{% url 'testedit' test.id %}">{{test.name}}</a>

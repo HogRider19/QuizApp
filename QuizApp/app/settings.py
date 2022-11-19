@@ -108,6 +108,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'logs/debug.log',
+            'mode': 'w',
             'formatter': 'mainformatter',
         },
         'file': {
@@ -119,6 +120,16 @@ LOGGING = {
     },
     'loggers': {
         'quiz': {
+            'handlers': ['console', 'file_debug', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'teacher': {
+            'handlers': ['console', 'file_debug', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'profiles': {
             'handlers': ['console', 'file_debug', 'file'],
             'level': 'DEBUG',
             'propagate': False,

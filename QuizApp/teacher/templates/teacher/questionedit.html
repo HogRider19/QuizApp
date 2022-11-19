@@ -2,5 +2,9 @@
 
 
 {% block content %}
-    {{form.as_p}}
+    <form action="{% url 'questionedit' question.id %}" method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button>Отпраить</button>
+    </form>
 {% endblock %}

@@ -3,8 +3,16 @@
 
 {% block content %}
     <h1>Редактирование теста: {{ test.name }}</h1>
-    {% for question in questions %}
+    <h3>Вопросы:</h3>
+    {% for question in test.questions.all %}
     <a href="{% url 'questionedit' question.id %}">{{question.description|truncatechars:100}}</a>
     <br>
     {% endfor %}
+    <br>
+    <h3>Параметры:</h3>
+    <form action="{% url 'testedit' test.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Отпраить</button>
+    </form>
 {% endblock %}

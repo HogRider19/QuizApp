@@ -33,7 +33,6 @@ class TestDetailView(LoginRequiredMixin, generic.DetailView):
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(**kwargs)
         status = context.get('test').get_test_status()
-        logger.debug("Status test: %s", status)
         context.update({'status': status})
         return context
 

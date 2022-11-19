@@ -1,11 +1,15 @@
-from django.shortcuts import render
-from django.views import View
-from django.views import generic
-from .models import course, Test, Question
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.mixins import UserPassesTestMixin
-from .permissions import OnlyAuthenticatedPermission
+import logging
 from typing import *
+
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.shortcuts import render
+from django.views import View, generic
+
+from .models import Question, Test, course
+from .permissions import OnlyAuthenticatedPermission
+
+
+logger = logging.getLogger(__name__)
 
 
 class HomePage(LoginRequiredMixin, generic.ListView):
@@ -28,7 +32,9 @@ class TestDetailView(LoginRequiredMixin, generic.DetailView):
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        context.update({'status': context.get('test').get_test_status()})
+        status = context.get('test').get_test_status()
+        logger.debug("Status test: %s", status)
+        context.update({'status': status})
         return context
 
 

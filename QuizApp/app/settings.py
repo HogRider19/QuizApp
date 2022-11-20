@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'core.middleware.TimingMiddleware'
 ]
 
 ROOT_URLCONF = 'app.urls'
@@ -94,7 +96,11 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'mainformatter': {
-            'format': '{levelname} {name} {asctime} {module} {message}',
+            'format': '{levelname} {name} {asctime} {message}',
+            'style': '{',
+        },
+        'timingformatter': {
+            'format': '{levelname} {asctime} {message}',
             'style': '{',
         },
     },
@@ -109,13 +115,22 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'logs/debug.log',
             'mode': 'w',
+            'encoding': 'utf8',
             'formatter': 'mainformatter',
         },
         'file': {
-            'level': 'WARNING',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'logs/log.log',
             'formatter': 'mainformatter',
+            'encoding': 'utf8',
+        },
+        'file_timing': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs/timinglog.log',
+            'formatter': 'timingformatter',
+            'encoding': 'utf8',
         },
     },
     'loggers': {
@@ -134,6 +149,11 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': False,
         },
+        'core': {
+            'handlers': ['file_timing'],
+            'level': 'INFO',
+            'propagate': False,
+        }, 
     },
 }
 

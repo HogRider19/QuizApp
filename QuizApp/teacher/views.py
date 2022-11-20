@@ -29,7 +29,10 @@ class CourseEditView(UserPassesTestMixin, generic.DetailView):
         return context
 
     def test_func(self) -> Optional[bool]:
-        return self.request.user.is_teacher
+        is_pass = self.request.user in self.get_object().teachers.all()
+        logger.info('User %s attempts to access %s course. Result %s',
+                             self.request.user, self.get_object(), is_pass)
+        return is_pass
 
 class TestEditView(UserPassesTestMixin, generic.UpdateView):
     model = Test
@@ -38,7 +41,10 @@ class TestEditView(UserPassesTestMixin, generic.UpdateView):
     fields = ('name', 'description', 'at_start', 'at_finish')
 
     def test_func(self) -> Optional[bool]:
-        return self.request.user.is_teacher
+        is_pass = self.request.user in self.get_object().authors.all()
+        logger.info('User %s attempts to access %s test. Result %s',
+                             self.request.user, self.get_object(), is_pass)
+        return is_pass
 
     def get_success_url(self) -> str:
         return self.request.path
@@ -53,8 +59,10 @@ class QuestionEditView(UserPassesTestMixin, generic.UpdateView):
     fields = ('photo', 'description')
 
     def test_func(self) -> Optional[bool]:
-
-        return self.request.user.is_teacher
+        is_pass = self.request.user in self.get_object().authors.all()
+        logger.info('User %s attempts to access %s Question. Result %s',
+                             self.request.user, self.get_object(), is_pass)
+        return is_pass
 
     def get_success_url(self) -> str:
         return self.request.path

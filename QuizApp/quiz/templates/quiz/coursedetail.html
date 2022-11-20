@@ -4,6 +4,7 @@
 {% block content %}
     <h1>{{course.name}}</h1>
     <br>
+    <p>{{cource.description}}</p>
 
     {% for test in course.tests.all %}
         <a href="{% url 'testdetail' test.id %}"><h3>{{test.name}}</h3></a>

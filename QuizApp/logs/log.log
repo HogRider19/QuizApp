@@ -1,1 +1,38 @@
 WARNING quiz.views 2022-11-19 22:01:59,007 views Status test: open
+INFO teacher.views 2022-11-20 00:50:06,555 User Михаил Михайлович - Учитель attempts to access Линейные коврики course. Result False
+INFO teacher.views 2022-11-20 01:01:01,637 User Михаил Михайлович - Учитель attempts to access Линейные коврики course. Result False
+INFO teacher.views 2022-11-20 01:01:22,458 User Михаил Зубенко - Учитель attempts to access Базовая логика course. Result True
+INFO teacher.views 2022-11-20 01:01:28,977 User Михаил Зубенко - Учитель attempts to access Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) test. Result True
+INFO teacher.views 2022-11-20 01:01:32,570 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат? Question. Result True
+INFO teacher.views 2022-11-20 01:01:42,390 User Михаил Зубенко - Учитель attempts to access Содержит ли класс <<Столы>> объект <Деревянный стул>? Question. Result True
+INFO teacher.views 2022-11-20 01:01:44,396 User Михаил Зубенко - Учитель attempts to access Как часто идет дождь??? Question. Result False
+INFO teacher.views 2022-11-20 01:01:48,170 User Михаил Зубенко - Учитель attempts to access Интернет технологии - (2022-11-07 16:09:06+00:00,2022-11-10 16:09:07+00:00) test. Result False
+INFO teacher.views 2022-11-20 01:01:50,571 User Михаил Зубенко - Учитель attempts to access Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) test. Result True
+INFO teacher.views 2022-11-20 01:01:51,628 User Михаил Зубенко - Учитель attempts to access Как часто идет дождь??? Question. Result False
+INFO teacher.views 2022-11-20 01:01:53,344 User Михаил Зубенко - Учитель attempts to access Содержит ли класс <<Столы>> объект <Деревянный стул>? Question. Result True
+INFO teacher.views 2022-11-20 12:32:43,616 User Михаил Зубенко - Учитель attempts to access Базовая логика course. Result True
+INFO teacher.views 2022-11-20 12:32:46,698 User Михаил Зубенко - Учитель attempts to access Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) test. Result True
+INFO teacher.views 2022-11-20 12:33:09,207 User Михаил Зубенко - Учитель attempts to access Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) test. Result True
+INFO teacher.views 2022-11-20 12:33:11,747 User Михаил Зубенко - Учитель attempts to access Как часто идет дождь??? Question. Result False
+INFO teacher.views 2022-11-20 12:33:14,376 User Михаил Зубенко - Учитель attempts to access Содержит ли класс <<Столы>> объект <Деревянный стул>? Question. Result True
+INFO teacher.views 2022-11-20 12:38:28,327 User Михаил Зубенко - Учитель attempts to access Содержит ли класс <<Столы>> объект <Деревянный стул>? Question. Result True
+INFO teacher.views 2022-11-20 12:38:37,643 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат? Question. Result True
+INFO teacher.views 2022-11-20 17:55:47,955 User Михаил Зубенко - Учитель attempts to access Базовая логика course. Result True
+INFO teacher.views 2022-11-20 17:55:48,574 User Михаил Зубенко - Учитель attempts to access Интернет технологии - (2022-11-07 16:09:06+00:00,2022-11-10 16:09:07+00:00) test. Result False
+INFO teacher.views 2022-11-20 17:55:51,580 User Михаил Зубенко - Учитель attempts to access Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) test. Result True
+INFO teacher.views 2022-11-20 17:55:52,448 User Михаил Зубенко - Учитель attempts to access Что из себя представляет дискретная версия интеграла? Question. Result False
+INFO teacher.views 2022-11-20 17:55:55,779 User Михаил Зубенко - Учитель attempts to access Сколько будет 1+1? Question. Result True
+INFO teacher.views 2022-11-20 17:56:00,229 User Михаил Зубенко - Учитель attempts to access Сколько будет 1+1? Question. Result True
+INFO teacher.views 2022-11-20 17:56:00,311 User Михаил Зубенко - Учитель attempts to access Сколько будет 1+1??? Question. Result True
+INFO teacher.views 2022-11-20 18:03:08,215 User Михаил Зубенко - Учитель attempts to access Базовая логика course. Result True
+INFO teacher.views 2022-11-20 18:03:08,838 User Михаил Зубенко - Учитель attempts to access Интернет технологии - (2022-11-07 16:09:06+00:00,2022-11-10 16:09:07+00:00) test. Result False
+INFO teacher.views 2022-11-20 18:03:09,927 User Михаил Зубенко - Учитель attempts to access Интернет технологии - (2022-11-07 16:09:06+00:00,2022-11-10 16:09:07+00:00) test. Result False
+INFO teacher.views 2022-11-20 18:03:13,482 User Михаил Зубенко - Учитель attempts to access Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) test. Result True
+INFO teacher.views 2022-11-20 18:03:14,440 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат? Question. Result True
+INFO teacher.views 2022-11-20 18:03:18,558 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат? Question. Result True
+INFO teacher.views 2022-11-20 18:03:18,630 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат??? Question. Result True
+INFO teacher.views 2022-11-20 18:03:24,541 User Михаил Зубенко - Учитель attempts to access Базовая логика course. Result True
+INFO teacher.views 2022-11-20 18:03:25,245 User Михаил Зубенко - Учитель attempts to access Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) test. Result True
+INFO teacher.views 2022-11-20 18:03:25,985 User Михаил Зубенко - Учитель attempts to access Как часто идет дождь??? Question. Result False
+INFO teacher.views 2022-11-20 18:03:30,861 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат??? Question. Result True
+INFO teacher.views 2022-11-20 18:03:46,091 User Данил Дмитренко - Ученик И902С attempts to access Как часто идет дождь??? Question. Result False

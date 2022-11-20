@@ -8,6 +8,7 @@ from django.conf import settings
 class course(models.Model):
     """Модель обучающего курса"""
     name = models.CharField(max_length=250)
+    description = models.TextField(max_length=5000, blank=True, null=True, verbose_name='Описание')
     groups = models.ManyToManyField(Group, related_name='courses', through='courseGroup')
     teachers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='author_courses', blank=True)
 

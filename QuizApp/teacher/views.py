@@ -10,9 +10,12 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class HomeTeacherPage(generic.ListView):
+class HomeTeacherPage(UserPassesTestMixin, generic.ListView):
     template_name = 'teacher/teacherpage.html'
     context_object_name = 'courses'
+
+    def test_func(self) -> Optional[bool]:
+        return self.request.user.is_teacher
 
     def get_queryset(self):
         return self.request.user.author_courses.all()

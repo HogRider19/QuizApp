@@ -1,9 +1,10 @@
 from django.db import models
 from django.conf import settings
-from quiz.models import Answer, Test
+from quiz.models import Answer, Test, Question
 
 
 class QuestionResault(models.Model):
+    question = models.ForeignKey(Question, related_name='question_results', on_delete=models.CASCADE)
     right_choices = models.ManyToManyField(Answer, related_name='question_resaults_right', blank=True)
     user_choices = models.ManyToManyField(Answer, related_name='question_resaults_user', blank=True)
 

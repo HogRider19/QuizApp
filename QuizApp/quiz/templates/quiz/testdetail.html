@@ -11,7 +11,7 @@
 Статус теста: {{status}}
 <br>
 {% if status == 'open' %}
-<form action="" method="post">
+<form action="{% url 'startcertification' test.id %}" method="post">
     {% csrf_token %}
     <button>Начать тестирование</button>
 </form>

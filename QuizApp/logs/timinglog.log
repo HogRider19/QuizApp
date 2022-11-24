@@ -69,3 +69,27 @@ INFO 2022-11-20 18:03:59,936 User: Данил Дмитренко - Ученик 
 INFO 2022-11-20 18:04:01,601 User: Данил Дмитренко - Ученик И902С, path: /course/2/, Lead time: 0.06628537178039551
 INFO 2022-11-20 18:04:02,410 User: Данил Дмитренко - Ученик И902С, path: /test/4/, Lead time: 0.16462230682373047
 INFO 2022-11-20 18:04:04,110 User: Данил Дмитренко - Ученик И902С, path: /, Lead time: 0.06320834159851074
+INFO 2022-11-24 15:11:21,716 User: AnonymousUser, path: /, Lead time: 0.005426168441772461
+INFO 2022-11-24 15:11:21,847 User: AnonymousUser, path: /profile/login/, Lead time: 0.12022089958190918
+INFO 2022-11-24 15:11:22,237 User: AnonymousUser, path: /favicon.ico, Lead time: 0.14082002639770508
+INFO 2022-11-24 15:11:28,705 User: Данил Дмитренко - Ученик И902С, path: /profile/login/, Lead time: 0.5984866619110107
+INFO 2022-11-24 15:11:28,839 User: Данил Дмитренко - Ученик И902С, path: /, Lead time: 0.12067699432373047
+INFO 2022-11-24 15:11:39,339 User: Данил Дмитренко - Ученик И902С, path: /course/1/, Lead time: 0.18674778938293457
+INFO 2022-11-24 15:11:42,033 User: Данил Дмитренко - Ученик И902С, path: /test/2/, Lead time: 0.09997963905334473
+INFO 2022-11-24 15:11:45,041 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.31897997856140137
+INFO 2022-11-24 15:12:32,843 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.1622753143310547
+INFO 2022-11-24 15:13:00,037 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.17355775833129883
+INFO 2022-11-24 15:13:15,273 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.15521740913391113
+INFO 2022-11-24 15:15:18,409 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.15770268440246582
+INFO 2022-11-24 15:16:43,410 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.16333222389221191
+INFO 2022-11-24 15:17:59,546 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.2635633945465088
+INFO 2022-11-24 15:18:43,541 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.17911863327026367
+INFO 2022-11-24 15:20:11,463 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.2673614025115967
+INFO 2022-11-24 15:22:15,762 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.27866649627685547
+INFO 2022-11-24 15:22:39,847 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.1962587833404541
+INFO 2022-11-24 15:23:05,258 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.19102168083190918
+INFO 2022-11-24 15:23:47,939 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.18496251106262207
+INFO 2022-11-24 15:24:22,103 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.18748831748962402
+INFO 2022-11-24 15:24:53,955 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.2085707187652588
+INFO 2022-11-24 15:25:39,402 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.18664860725402832
+INFO 2022-11-24 15:26:15,076 User: Данил Дмитренко - Ученик И902С, path: /certification/start/2/, Lead time: 0.17310404777526855

@@ -47,7 +47,7 @@ class CertificationManager:
         if self._test_resault:
             if self._test != self._test_resault.test:
                 logger.info("User %s is trying to open more that one test!", self._user)
-            return self._test_resault
+            return 
 
         self._test = test
         self._test_resault = TestResault.objects.create(
@@ -80,8 +80,10 @@ class CertificationManager:
 
     def set_answer(self, question_num: int, answers: List[Answer]):
         question = self._questions[question_num]
-        QuestionResault.objects.create(
+        qr = QuestionResault.objects.create(
             question=question,
-
         )
+        qr.right_choices.appen(qr.question.answers.filter(is_right=True))
+        qr.user_choices.append(answers)
+        qr.save()
 

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'certification',
     'profiles',
     'teacher',
     'quiz',
@@ -149,6 +150,11 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': False,
         },
+        'certification': {
+            'handlers': ['console', 'file_debug', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        }, 
         'core': {
             'handlers': ['file_timing'],
             'level': 'INFO',

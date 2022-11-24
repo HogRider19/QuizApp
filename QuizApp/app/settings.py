@@ -97,7 +97,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'mainformatter': {
-            'format': '{levelname} {name} {asctime} {message}',
+            'format': '{levelname} {name} {message}',
             'style': '{',
         },
         'timingformatter': {
@@ -159,7 +159,7 @@ LOGGING = {
             'handlers': ['file_timing'],
             'level': 'INFO',
             'propagate': False,
-        }, 
+        },
     },
 }
 

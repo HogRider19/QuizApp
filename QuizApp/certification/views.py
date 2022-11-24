@@ -9,6 +9,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class StartCertificationView(UserPassesTestMixin, View):
 
     def post(self, request, test_pk):
@@ -16,21 +17,20 @@ class StartCertificationView(UserPassesTestMixin, View):
         manager = CertificationManager(request.user)
 
         if manager.is_busy():
-            return redirect('home')
+            manager.close_certification()
 
         manager.open_certification(Test.objects.get(pk=test_pk))
-        return redirect('decisioncertification')
+        return redirect('decisioncertification', 0)
 
     def test_func(self) -> Optional[bool]:
-        logger.debug('Request dir: %s', [attr for attr in dir(self.request) if not attr.startswith('__')])
         user_courses = self.request.user.get_courses()
-        accessible_test = [user_course.tests for user_course in user_courses]
-        return Test.objects.get(pk=self.request.test_pk) in accessible_test
+        accessible_test = sum([list(user_course.tests.all()) for user_course in user_courses], [])
+        return Test.objects.get(pk=self.kwargs.get('test_pk')) in accessible_test
 
 
 class DecisionView(UserPassesTestMixin, View):
     
-    def get(self, request):
+    def get(self, request, question_num):
         
         manager = CertificationManager(request.user)
         question = manager.get_next_question()

@@ -36,3 +36,7 @@ INFO teacher.views 2022-11-20 18:03:25,245 User Михаил Зубенко - У
 INFO teacher.views 2022-11-20 18:03:25,985 User Михаил Зубенко - Учитель attempts to access Как часто идет дождь??? Question. Result False
 INFO teacher.views 2022-11-20 18:03:30,861 User Михаил Зубенко - Учитель attempts to access Какого цвета квадрат??? Question. Result True
 INFO teacher.views 2022-11-20 18:03:46,091 User Данил Дмитренко - Ученик И902С attempts to access Как часто идет дождь??? Question. Result False
+INFO django.utils.autoreload 2022-11-24 23:19:17,937 Watching for file changes with StatReloader
+INFO django.utils.autoreload 2022-11-24 23:19:31,052 Watching for file changes with StatReloader
+INFO django.utils.autoreload 2022-11-24 23:20:04,831 D:\Python\Projects\Quiz\QuizApp\app\settings.py changed, reloading.
+ERROR certification.certificationManager User Данил Дмитренко - Ученик И902С has more that one open test! 

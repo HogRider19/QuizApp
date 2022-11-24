@@ -1,0 +1,48 @@
+DEBUG certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000023A1598EA30>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С closes the certification
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: False
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet []>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С openes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, questions: [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question, num: 0
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, current question: Как часто идет дождь???
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С closes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С openes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, questions: [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question, num: 0
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, current question: Как часто идет дождь???
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С closes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С openes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, questions: [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question, num: 0
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, current question: Как часто идет дождь???
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С closes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С openes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, questions: [<Question: Что из себя представляет дискретная версия интеграла?>, <Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Сколько будет 1+1???>]
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question, num: 0
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, current question: Что из себя представляет дискретная версия интеграла?

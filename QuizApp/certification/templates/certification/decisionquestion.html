@@ -5,8 +5,25 @@
     <br>
     {{question.description}}
     <br>
-    {% for answer in question.answers.all %}
-        {{answer.description}}
+    <form method="post" action="{% url 'decisioncertification' question_num %}">
+        {% csrf_token %}
+        {% for answer in question.answers.all %}
+        <input type="checkbox" ><label>{{answer.description}}</label>
         <br>
-    {% endfor %}
+        {% endfor %}
+        {% if question_num == last_question_num %}
+            <button>Ответить и завершить тест</button>
+        {% else %}
+            <button>Ответить</button>
+        {% endif %}
+    </form>
+
+    <br>
+    <br>
+
+    <form method="post" action="{% url 'finishpage' %}">
+        {% csrf_token %}
+        <button>Завершить тест</button>
+    </form>
+
 {% endblock %}

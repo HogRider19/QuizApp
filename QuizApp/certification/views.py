@@ -16,9 +16,6 @@ class StartCertificationView(UserPassesTestMixin, View):
         
         manager = CertificationManager(request.user)
 
-        if manager.is_busy():
-            manager.close_certification()
-
         manager.open_certification(Test.objects.get(pk=test_pk))
         return redirect('decisioncertification', 0)
 
@@ -33,15 +30,23 @@ class DecisionView(UserPassesTestMixin, View):
     def get(self, request, question_num):
         
         manager = CertificationManager(request.user)
-        question = manager.get_next_question()
+        question = manager.get_question(question_num)
 
         if question:
-            return render(request, 'certification/decisionquestion.html', {'question': question})
+            return render(request, 'certification/decisionquestion.html',
+                            {'question': question, 'question_num':  question_num,
+                            'last_question_num': manager.last_question_num})
 
-        return redirect('finishcertification')
+        return redirect('finishpage')
 
-    def post(self, request):
-        pass
+    def post(self, request, question_num):
+        
+        manager = CertificationManager(request.user)
+
+        """Save answers"""
+        ...
+
+        return redirect('decisioncertification', question_num+1)
 
     def test_func(self) -> Optional[bool]:
         return not self.request.user.is_anonymous
@@ -58,5 +63,11 @@ class FinishCertificationView(UserPassesTestMixin, View):
 
     def test_func(self) -> Optional[bool]:
         return not self.request.user.is_anonymous
+
+
+class FinishPageView(View):
+    
+    def get(self, requeset):
+        return render(requeset, 'certification/finishpage.html', {})
 
 

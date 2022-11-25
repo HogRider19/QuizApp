@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Вы ответили на все вопросы</h3>
+<br>
+    <a href="">Вернуться к тесту</a>
+<br>
+<form method="post" action="{% url 'finishcertification' %}">
+    {% csrf_token %}
+    <button>Завершить тест</button>
+</form>
+
+{% endblock %}

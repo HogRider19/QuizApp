@@ -5,6 +5,8 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from typing import Optional
 from quiz.models import course, Test
 import logging
+from django.forms import Form
+from quiz.models import Answer
 
 
 logger = logging.getLogger(__name__)
@@ -43,8 +45,7 @@ class DecisionView(UserPassesTestMixin, View):
         
         manager = CertificationManager(request.user)
 
-        """Save answers"""
-        ...
+        manager.set_answer(question_num, request.POST)
 
         return redirect('decisioncertification', question_num+1)
 

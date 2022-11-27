@@ -104,13 +104,14 @@ class CertificationManager:
             raise Http404
         return self._questions[question_num]
 
-    def set_answer(self, question_num: int, answers: List[Answer]):
+    def set_answer(self, question_num: int, post: dict):
+        answers = self._get_answers_from_post(post)
         logger.debug("User %s (set_answer), question_num: %s, answers:  %s", self._user, question_num, answers)
         question = self._questions[question_num]
         qr = QuestionResault.objects.create(
             question=question,
         )
-        qr.right_choices.append(qr.question.answers.filter(is_right=True))
+        qr.right_choices.append(question.answers.filter(is_right=True))
         qr.user_choices.append(answers)
         qr.save()
 
@@ -124,3 +125,8 @@ class CertificationManager:
             self._test_result = self._user.user_results.get(is_open=True)
             self._questions = self._test_result.test.questions.all()
         self._current_question_num = 0
+
+    def _get_answers_from_post(self, post: dict):
+        answers_id = [int(value) for name, value in post.items() if name.startswith('answer_id')]
+        answers = Answer.objects.filter(id__in=answers_id)
+        return answers

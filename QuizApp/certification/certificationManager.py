@@ -108,12 +108,20 @@ class CertificationManager:
         answers = self._get_answers_from_post(post)
         logger.debug("User %s (set_answer), question_num: %s, answers:  %s", self._user, question_num, answers)
         question = self._questions[question_num]
+
+        previous_question_answer = self._test_result.question_resaults.filter(question__id=question.id)
+        if previous_question_answer:
+            self._test_result.question_resaults.remove(previous_question_answer[0])
+            logger.debug("The previous answer has been removed")
+        
         qr = QuestionResault.objects.create(
             question=question,
         )
-        qr.right_choices.append(question.answers.filter(is_right=True))
-        qr.user_choices.append(answers)
+        qr.right_choices.set(question.answers.filter(is_right=True))
+        qr.user_choices.set(answers)
         qr.save()
+
+        self._test_result.question_resaults.add(qr)
 
     @property
     def last_question_num(self):

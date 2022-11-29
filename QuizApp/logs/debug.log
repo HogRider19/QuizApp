@@ -1,0 +1,140 @@
+DEBUG certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: False
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet []>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: False
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet []>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С openes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, questions: <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 0
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 0, answers:  <QuerySet [<Answer: Решает шаман>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 1
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 1, answers:  <QuerySet [<Answer: Да>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 2
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 2, answers:  <QuerySet [<Answer: Квадратный>, <Answer: Круглый>]>
+DEBUG certification.certificationManager The previous answer has been removed
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 3
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the last question(get_question), num: 3
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С closes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Основы мировосприятия - (2022-11-17 16:05:27+00:00,2022-11-30 16:05:28+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: False
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet []>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: False
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet []>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С openes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, questions: <QuerySet [<Question: Что из себя представляет дискретная версия интеграла?>, <Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Сколько будет 1+1???>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 0
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 0, answers:  <QuerySet [<Answer: Сумму>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 1
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 1, answers:  <QuerySet [<Answer: Зависит от солнца>, <Answer: Странный вопрос>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 2
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 2, answers:  <QuerySet [<Answer: Нет>]>
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 3
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С (set_answer), question_num: 3, answers:  <QuerySet [<Answer: 2>]>
+DEBUG certification.certificationManager The previous answer has been removed
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the question(get_question), num: 4
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С receives the last question(get_question), num: 4
+DEBUG certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+DEBUG certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000015C3F332EB0>}
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С closes the certification
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Update attrs
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С, Check is_busy: True
+DEBUG certification.certificationManager User Данил Дмитренко - Ученик И902С,  open_certification: <QuerySet [<TestResault: Линейные интегральные расчеты - (2022-11-20 16:06:57+00:00,2022-11-30 16:06:58+00:00) - Данил,Дмитренко>]>

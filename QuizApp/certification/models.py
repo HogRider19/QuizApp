@@ -8,6 +8,9 @@ class QuestionResault(models.Model):
     right_choices = models.ManyToManyField(Answer, related_name='question_resaults_right', blank=True)
     user_choices = models.ManyToManyField(Answer, related_name='question_resaults_user', blank=True)
 
+    def __str__(self) -> str:
+        return self.question.description
+
     class Meta:
         verbose_name = 'Ответ на вопрос'
         verbose_name_plural = 'Ответы на вопрос'

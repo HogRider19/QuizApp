@@ -8,7 +8,7 @@
     <form method="post" action="{% url 'decisioncertification' question_num %}">
         {% csrf_token %}
         {% for answer in question.answers.all %}
-        <input type="checkbox" name="answer_id{{forloop.counter0}}" value="{{answer.id}}"><label>{{answer.description}}</label> {{forloop.counter0}}
+        <input type="checkbox" name="answer_id{{forloop.counter0}}" value="{{answer.id}}"><label>{{answer.description}}</label>
         <br>
         {% endfor %}
         {% if question_num == last_question_num %}

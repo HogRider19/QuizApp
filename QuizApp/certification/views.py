@@ -7,6 +7,7 @@ from quiz.models import course, Test
 import logging
 from django.forms import Form
 from quiz.models import Answer
+from .models import TestResault
 
 
 logger = logging.getLogger(__name__)
@@ -59,9 +60,10 @@ class FinishCertificationView(UserPassesTestMixin, View):
     def post(self, request):
         
         manager = CertificationManager(request.user)
+        tr_pk = manager._test_result.id
         manager.close_certification()
 
-        return redirect('home')
+        return redirect('testresultpage', tr_pk)
 
     def test_func(self) -> Optional[bool]:
         return not self.request.user.is_anonymous
@@ -71,5 +73,12 @@ class FinishPageView(View):
     
     def get(self, requeset):
         return render(requeset, 'certification/finishpage.html', {})
+
+
+class TestResultPageView(View):
+
+    def get(self, request, tr_pk):
+        test_result = TestResault.objects.get(id=tr_pk)
+        return render(request, 'certification/testresultpage.html', {'test_result': test_result})
 
 

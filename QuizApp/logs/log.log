@@ -622,3 +622,5 @@ CRITICAL certification.certificationManager qr.question.id [3, 4]
 CRITICAL certification.certificationManager question.id 1
 CRITICAL certification.certificationManager filter []
 WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С

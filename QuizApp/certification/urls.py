@@ -6,4 +6,5 @@ urlpatterns = [
     path('decision/<int:question_num>/', views.DecisionView.as_view(), name='decisioncertification'),
     path('finish/', views.FinishCertificationView.as_view(), name='finishcertification'),
     path('finishpage/', views.FinishPageView.as_view(), name='finishpage'),
+    path('testresultpage/<int:tr_pk>', views.TestResultPageView.as_view(), name='testresultpage'),
 ]

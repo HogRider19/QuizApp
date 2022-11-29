@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Результат теста: {{test_result.test.name}}</h1>
+
+    {% for question_resault in test_result.question_resaults.all %}
+        <h3>{{question_resault.question.description}}</h3>
+        <h5>Правоельные ответы:</h5>
+        {% for right_choice in question_resault.right_choices.all %}
+            {{ right_choice.description }}
+            <br>
+        {% endfor %}
+        <h5>Вы ответили:</h5>
+        {% for user_choice in question_resault.user_choices.all %}
+            {{ user_choice.description }}
+            <br>
+        {% endfor %}
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'home' %}">Домашняя страница</a>
+    <br>
+    <h1>____</h1>
+
+{% endblock %}

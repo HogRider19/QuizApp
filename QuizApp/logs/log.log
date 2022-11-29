@@ -52,3 +52,573 @@ INFO certification.certificationManager User Данил Дмитренко - У�
 INFO certification.certificationManager User Данил Дмитренко - Ученик И902С is trying to open more that one test!
 INFO certification.certificationManager User Данил Дмитренко - Ученик И902С is trying to open more that one test!
 INFO certification.certificationManager User Данил Дмитренко - Ученик И902С is trying to open more that one test!
+ERROR certification.certificationManager (set_answer), question: Какого цвета квадрат???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> 
+ERROR certification.certificationManager (set_answer), question: Как часто идет дождь???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> 
+ERROR certification.certificationManager (set_answer), question: Какого цвета квадрат???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> 
+WARNING certification.certificationManager (set_answer), question: Какого цвета квадрат???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> , question_num 0
+WARNING certification.certificationManager (set_answer), question: Как часто идет дождь???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> , question_num 1
+WARNING certification.certificationManager (set_answer), question: Какого цвета квадрат???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> , question_num 2
+WARNING certification.certificationManager i: 0 quset: Какого цвета квадрат???
+WARNING certification.certificationManager i: 1 quset: Как часто идет дождь???
+WARNING certification.certificationManager i: 2 quset: Какого цвета квадрат???
+WARNING certification.certificationManager (set_answer), question: Какого цвета квадрат???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> , question_num 0
+WARNING certification.certificationManager i: 0 quset: Какого цвета квадрат???
+WARNING certification.certificationManager i: 1 quset: Как часто идет дождь???
+WARNING certification.certificationManager i: 2 quset: Какого цвета квадрат???
+WARNING certification.certificationManager qusets: <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]>
+WARNING certification.certificationManager i: 0 quset: Какого цвета квадрат???
+WARNING certification.certificationManager i: 1 quset: Как часто идет дождь???
+WARNING certification.certificationManager i: 2 quset: Какого цвета квадрат???
+WARNING certification.certificationManager (set_answer), question: Какого цвета квадрат???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> , question_num 0
+WARNING certification.certificationManager qusets: <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]>
+WARNING certification.certificationManager i: 0 quset: Как часто идет дождь???
+WARNING certification.certificationManager i: 1 quset: Содержит ли класс <<Столы>> объект <Деревянный стул>?
+WARNING certification.certificationManager i: 2 quset: Какого цвета квадрат???
+WARNING certification.certificationManager (set_answer), question: Как часто идет дождь???, _questions <QuerySet [<Question: Как часто идет дождь???>, <Question: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <Question: Какого цвета квадрат???>]> , question_num 1
+WARNING certification.certificationManager answers: <QuerySet []>
+WARNING certification.certificationManager answers: <QuerySet []>
+WARNING certification.certificationManager answers(1): <QuerySet []>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <QuestionResault: Какого цвета квадрат???>]>
+WARNING certification.certificationManager answers: <QuerySet []>
+WARNING certification.certificationManager answers: <QuerySet []>
+WARNING certification.certificationManager answers(1): <QuerySet []>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(1): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager answers(2): <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>, <QuestionResault: Какого цвета квадрат???>]>
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000152F4D5DFD0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000152F4D5DFD0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000152F4D5DFD0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000152F4D5DFD0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000152F4D5DFD0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000152F4D5DFD0>}
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000017914F14910>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000179158BF790>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet []>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet []>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet []>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x00000219F757E400>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet []>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet [<QuestionResault: Как часто идет дождь???>, <QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002075DDBCBE0>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002B27428C580>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002B27428C580>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002B27428C580>}
+CRITICAL certification.certificationManager previous_question_answer <QuerySet []>
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000002B27428C580>}
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001780AED9AF0>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001A23AC7D100>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000026CCE5E0280>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000026CCE5E0280>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000026CCE5E0280>}
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+CRITICAL certification.certificationManager []
+CRITICAL certification.certificationManager 3
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+CRITICAL certification.certificationManager [153]
+CRITICAL certification.certificationManager 4
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+CRITICAL certification.certificationManager [153, 154]
+CRITICAL certification.certificationManager 1
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x0000021A5B6AE400>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Created a new manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+CRITICAL certification.certificationManager []
+CRITICAL certification.certificationManager 3
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+CRITICAL certification.certificationManager [3]
+CRITICAL certification.certificationManager 4
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+CRITICAL certification.certificationManager [3, 4]
+CRITICAL certification.certificationManager 4
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+CRITICAL certification.certificationManager [3, 4]
+CRITICAL certification.certificationManager 1
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager Received already created manager for Данил Дмитренко - Ученик И902С
+WARNING certification.certificationManager Users_managers: {<SimpleLazyObject: <User: Данил Дмитренко - Ученик И902С>>: <certification.certificationManager.CertificationManager object at 0x000001CDE2581370>}
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager The previous answer has been removed
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager Befor: <QuerySet []>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager Befor: <QuerySet []>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager Befor: <QuerySet []>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager Befor: <QuerySet []>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager Befor: <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager Befor: <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager Befor: <QuerySet [<QuestionResault: Как часто идет дождь???>]>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager Befor: <QuerySet [<QuestionResault: Содержит ли класс <<Столы>> объект <Деревянный стул>?>]>
+WARNING certification.certificationManager after: <QuerySet []>
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager Befor: 2
+WARNING certification.certificationManager after: 2
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager Befor: 3
+WARNING certification.certificationManager after: 3
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter [3]
+WARNING certification.certificationManager Befor: 4
+WARNING certification.certificationManager after: 4
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [4, 3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter [4]
+WARNING certification.certificationManager Befor: 5
+WARNING certification.certificationManager after: 5
+WARNING certification.certificationManager <QuerySet []>
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С
+CRITICAL certification.certificationManager qr.question.id []
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [4]
+CRITICAL certification.certificationManager question.id 3
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3]
+CRITICAL certification.certificationManager question.id 4
+CRITICAL certification.certificationManager filter []
+CRITICAL certification.certificationManager qr.question.id [3, 4]
+CRITICAL certification.certificationManager question.id 1
+CRITICAL certification.certificationManager filter []
+WARNING certification.certificationManager delete_manager, user: Данил Дмитренко - Ученик И902С

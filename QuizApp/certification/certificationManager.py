@@ -10,6 +10,35 @@ from django.http import Http404
 logger = logging.getLogger(__name__)
 
 
+class one_user_one_manger:
+
+    users_managers = {}
+
+    def __call__(self, cls):
+        
+        @wraps(cls)
+        def iternal(user):
+
+            manager = None
+            if user in self.users_managers:
+                logger.debug("Received already created manager for %s", user)
+                manager = self.users_managers.get(user)
+            else:
+                manager = cls(user)
+                self.users_managers.update({user: manager})
+                logger.debug("Created a new manager for %s", user)
+
+            manager._update_attrs_using_db()
+            manager._decorator = self
+            return manager
+
+        return iternal
+
+    def delete_manager(self, user: User):
+        del self.users_managers[user]
+        logger.warning("delete_manager, user: %s", user)
+
+"""
 def one_user_one_manger(cls):
     users_managers = {}
 
@@ -31,9 +60,9 @@ def one_user_one_manger(cls):
         return manager
 
     return iternal
+"""
 
-
-@one_user_one_manger
+@one_user_one_manger()
 class CertificationManager:
 
     def __init__(self, user: User) -> None:
@@ -54,11 +83,12 @@ class CertificationManager:
 
     def open_certification(self, test: Test):
 
+        self._update_attrs_using_db()
+
         if self.is_busy():
             logger.debug("User %s is trying to open a non-closed certification", self._user)
             if self._test != self._test_result.test:
                 logger.info("User %s is trying to open more that one test!", self._user)
-            self._update_attrs_using_db()
             return
         
         logger.debug("User %s openes the certification", self._user)
@@ -70,7 +100,8 @@ class CertificationManager:
             is_open=True,
         )
 
-        self._questions = self._test_result.test.questions.all()
+
+        self._questions = list(self._test_result.test.questions.all())
 
         logger.debug("User %s, questions: %s", self._user, self._questions)
 
@@ -90,6 +121,7 @@ class CertificationManager:
         self._test = None
         self._questions = None
         self._current_question_num = 0
+        self._decorator.delete_manager(self._user)
 
     def shift_question_pointer(self):
         self._current_question_num += 1
@@ -106,13 +138,9 @@ class CertificationManager:
 
     def set_answer(self, question_num: int, post: dict):
         answers = self._get_answers_from_post(post)
-        logger.debug("User %s (set_answer), question_num: %s, answers:  %s", self._user, question_num, answers)
         question = self._questions[question_num]
 
-        previous_question_answer = self._test_result.question_resaults.filter(question__id=question.id)
-        if previous_question_answer:
-            self._test_result.question_resaults.remove(previous_question_answer[0])
-            logger.debug("The previous answer has been removed")
+        self._test_result.question_resaults.filter(question__id=question.id).delete()
         
         qr = QuestionResault.objects.create(
             question=question,
@@ -131,7 +159,7 @@ class CertificationManager:
         logger.debug("User %s, Update attrs", self._user)
         if self.is_busy():
             self._test_result = self._user.user_results.get(is_open=True)
-            self._questions = self._test_result.test.questions.all()
+            self._questions = list(self._test_result.test.questions.all())
         self._current_question_num = 0
 
     def _get_answers_from_post(self, post: dict):

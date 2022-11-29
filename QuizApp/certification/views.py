@@ -19,6 +19,7 @@ class StartCertificationView(UserPassesTestMixin, View):
         manager = CertificationManager(request.user)
 
         manager.open_certification(Test.objects.get(pk=test_pk))
+
         return redirect('decisioncertification', 0)
 
     def test_func(self) -> Optional[bool]:

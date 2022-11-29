@@ -152,7 +152,7 @@ LOGGING = {
         },
         'certification': {
             'handlers': ['console', 'file_debug', 'file'],
-            'level': 'DEBUG',
+            'level': 'WARNING',
             'propagate': False,
         }, 
         'core': {

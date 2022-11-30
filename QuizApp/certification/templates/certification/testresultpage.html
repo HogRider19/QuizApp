@@ -2,7 +2,15 @@
 
 
 {% block content %}
-    <h1>Результат теста: {{test_result.test.name}}</h1>
+    <h1>Результат теста: {{test_result.test.name}} 
+        (
+        {% if test_result.passed %}    
+            Пройден
+        {% else %}
+            Не пройден
+        {% endif %}   
+        )
+    </h1>
 
     {% for question_resault in test_result.question_resaults.all %}
         <h3>{{question_resault.question.description}}</h3>

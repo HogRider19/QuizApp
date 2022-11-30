@@ -38,29 +38,6 @@ class one_user_one_manger:
         del self.users_managers[user]
         logger.warning("delete_manager, user: %s", user)
 
-"""
-def one_user_one_manger(cls):
-    users_managers = {}
-
-    @wraps(cls)
-    def iternal(user):
-
-        manager = None
-        if user in users_managers:
-            logger.debug("Received already created manager for %s", user)
-            manager = users_managers.get(user)
-        else:
-            manager = cls(user)
-            users_managers.update({user: manager})
-            logger.debug("Created a new manager for %s", user)
-
-        logger.debug("Users_managers: %s", users_managers)
-
-        manager._update_attrs_using_db()
-        return manager
-
-    return iternal
-"""
 
 @one_user_one_manger()
 class CertificationManager:
@@ -115,8 +92,7 @@ class CertificationManager:
 
         self._update_attrs_using_db()
 
-        self._test_result.is_open = False
-        self._test_result.save()
+        self._test_result.close()
         self._test_result = None
         self._test = None
         self._questions = None
@@ -150,6 +126,9 @@ class CertificationManager:
         qr.save()
 
         self._test_result.question_resaults.add(qr)
+
+    def get_test_result(self):
+        return self._test_result
 
     @property
     def last_question_num(self):

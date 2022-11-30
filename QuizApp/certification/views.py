@@ -60,10 +60,10 @@ class FinishCertificationView(UserPassesTestMixin, View):
     def post(self, request):
         
         manager = CertificationManager(request.user)
-        tr_pk = manager._test_result.id
+        test_result= manager.get_test_result()
         manager.close_certification()
 
-        return redirect('testresultpage', tr_pk)
+        return redirect('testresultpage', test_result.id)
 
     def test_func(self) -> Optional[bool]:
         return not self.request.user.is_anonymous

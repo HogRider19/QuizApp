@@ -25,7 +25,6 @@ logs/debug.log
 
 *.log
 
-data
 
 .vscode
 .vscode/

@@ -19,8 +19,6 @@ media/*
 
 secret_keys.py
 
-log/debug.log
-
 logs/debug.log
 
 *.log

@@ -7,10 +7,12 @@
     <p>{{cource.description}}</p>
 
     {% for test in course.tests.all %}
-        <a href="{% url 'testdetail' test.id %}"><h3>{{test.name}}</h3></a>
+        <a href="{% url 'testdetail' course.id test.id %}"><h3>{{test.name}}</h3></a>
         ({{test.at_start}} - {{test.at_finish}})
         <br>
         <p>{{test.description|truncatechars:300}}</p>
     {% endfor %}
+
+<a href="{% url 'home' %}">Вернуться к выбору курса</a>
 
 {% endblock %}

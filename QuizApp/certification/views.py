@@ -3,11 +3,11 @@ from django.views import View
 from .certificationManager import CertificationManager
 from django.contrib.auth.mixins import UserPassesTestMixin
 from typing import Optional
-from quiz.models import course, Test
+from quiz.models import Course, Test
 import logging
 from django.forms import Form
 from quiz.models import Answer
-from .models import TestResault
+from .models import TestResult
 
 
 logger = logging.getLogger(__name__)
@@ -26,7 +26,9 @@ class StartCertificationView(UserPassesTestMixin, View):
     def test_func(self) -> Optional[bool]:
         user_courses = self.request.user.get_courses()
         accessible_test = sum([list(user_course.tests.all()) for user_course in user_courses], [])
-        return Test.objects.get(pk=self.kwargs.get('test_pk')) in accessible_test
+        test = Test.objects.get(pk=self.kwargs.get('test_pk'))
+        available_attempts = test.get_available_attempts(self.request.user)
+        return test in accessible_test and available_attempts > 0
 
 
 class DecisionView(UserPassesTestMixin, View):
@@ -78,7 +80,7 @@ class FinishPageView(View):
 class TestResultPageView(View):
 
     def get(self, request, tr_pk):
-        test_result = TestResault.objects.get(id=tr_pk)
+        test_result = TestResult.objects.get(id=tr_pk)
         return render(request, 'certification/testresultpage.html', {'test_result': test_result})
 
 

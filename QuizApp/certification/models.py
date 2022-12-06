@@ -4,8 +4,7 @@ from quiz.models import Answer, Test, Question
 from django.db.models import F
 
 
-
-class QuestionResault(models.Model):
+class QuestionResult(models.Model):
     question = models.ForeignKey(Question, related_name='question_results', on_delete=models.CASCADE)
     right_choices = models.ManyToManyField(Answer, related_name='question_resaults_right', blank=True)
     user_choices = models.ManyToManyField(Answer, related_name='question_resaults_user', blank=True)
@@ -17,10 +16,10 @@ class QuestionResault(models.Model):
         verbose_name = 'Ответ на вопрос'
         verbose_name_plural = 'Ответы на вопрос'
 
-class TestResault(models.Model):
+class TestResult(models.Model):
     test = models.ForeignKey(Test, related_name='test_results', on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='user_results', on_delete=models.CASCADE)
-    question_resaults = models.ManyToManyField(QuestionResault, blank=True)
+    question_resaults = models.ManyToManyField(QuestionResult, blank=True)
     is_open = models.BooleanField(verbose_name='Сейчас выполняется')
     passed = models.BooleanField(verbose_name="Пройден", blank=True, null=True, default=False)
 
@@ -36,7 +35,7 @@ class TestResault(models.Model):
         self.save()
 
     def get_right_percent(self):
-        question_count = self.question_resaults.count()
+        question_count = self.test.questions.count()
         right_question_count = self.question_resaults.filter(right_choices=F('user_choices')).count()
         return (right_question_count / question_count) * 100
 

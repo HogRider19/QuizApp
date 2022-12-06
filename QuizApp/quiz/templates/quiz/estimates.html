@@ -2,4 +2,22 @@
 
 
 {% block content %}
+    <h1>Мои оценки:</h1>
+    {% for estimate in test_results_list %}
+        <h5>{{estimate.test.name}}:</h5> 
+        Нужно было набрать:{{estimate.test.success_percent}}%
+        <br>
+        Результат:          
+        {% if estimate.passed %}
+            Пройден
+        {% else %}
+            Не пройден
+        {% endif %}
+        <br>
+    {% endfor %}
+
+    <a href="{% url 'home' %}">Главная страница</a>
+
+    <br><br><br>
+    <h1>___</h1>
 {% endblock %}

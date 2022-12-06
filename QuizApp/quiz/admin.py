@@ -2,19 +2,19 @@ from django.contrib import admin
 from . import models
 
 
-class courseGroupInLine(admin.TabularInline):
-    model = models.courseGroup
+class CourseGroupInLine(admin.TabularInline):
+    model = models.CourseGroup
     extra = 0
 
 class QuestionAnswerInLine(admin.TabularInline):
     model = models.Answer
     extra = 4
 
-@admin.register(models.course)
+@admin.register(models.Course)
 class courseAdmin(admin.ModelAdmin):
-    model = models.course
+    model = models.Course
     inlines = [
-        courseGroupInLine,
+        CourseGroupInLine,
     ]
 
 @admin.register(models.Answer)

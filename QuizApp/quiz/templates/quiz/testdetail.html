@@ -12,7 +12,9 @@
 <br>
 Статус теста: {{status}}
 <br>
-{% if status == 'open' %}
+Доступно попыток: {{available_attempts}}
+<br>
+{% if status == 'open' and available_attempts > 0 %}
 <form action="{% url 'startcertification' test.id %}" method="post">
     {% csrf_token %}
     <button>Начать тестирование</button>
@@ -26,5 +28,5 @@
 {% endif %}
 
 <br>
-<a href="">Вернуться к курсу</a>
+<a href="{% url 'coursedetail' course_id %}">Вернуться к выбору теста</a>
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.views import generic
-from quiz.models import course, Test, Question
+from quiz.models import Course, Test, Question
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from typing import *
@@ -21,7 +21,7 @@ class HomeTeacherPage(UserPassesTestMixin, generic.ListView):
         return self.request.user.author_courses.all()
 
 class CourseEditView(UserPassesTestMixin, generic.DetailView):
-    model = course
+    model = Course
     template_name = 'teacher/courseedit.html'
     context_object_name = 'course'
 
@@ -62,10 +62,10 @@ class QuestionEditView(UserPassesTestMixin, generic.UpdateView):
     fields = ('photo', 'description')
 
     def test_func(self) -> Optional[bool]:
-        is_pass = self.request.user in self.get_object().authors.all()
+        passed = self.request.user in self.get_object().authors.all()
         logger.info('User %s attempts to access %s Question. Result %s',
-                             self.request.user, self.get_object(), is_pass)
-        return is_pass
+                             self.request.user, self.get_object(), passed)
+        return passed
 
     def get_success_url(self) -> str:
         return self.request.path

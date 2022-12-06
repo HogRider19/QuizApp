@@ -33,19 +33,20 @@ class Group(models.Model):
         return f"{self.faculty}{self.department}{self.year_admission[-1]}{self.number}{self.study_form}"
 
     class Meta:
-        verbose_name = 'Группа'
-        verbose_name_plural = 'Группы'
+        verbose_name = 'Учебная группа'
+        verbose_name_plural = 'Учебные группы'
 
 
 class User(AbstractUser):
     middle_name = models.CharField(max_length=100, verbose_name='Отчество', blank=True, null=True)
-    group = models.ForeignKey(Group, related_name='profiles', verbose_name='Учебная группа',
+    group = models.ForeignKey(Group, related_name='users', verbose_name='Учебная группа',
                             blank=True, null=True, on_delete=models.SET_NULL, default=None)
     is_teacher = models.BooleanField(default=False, verbose_name='Является учителем')
 
     def get_courses(self):
         if self.group:
             return self.group.courses.all()
+        return []
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name} - {'Учитель' if self.is_teacher else f'Ученик {self.group}'}"

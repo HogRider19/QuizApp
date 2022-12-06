@@ -2,10 +2,10 @@ from django.contrib import admin
 from . import models
 
 
-@admin.register(models.TestResault)
-class TestResaultAdmin(admin.ModelAdmin):
-    model = models.TestResault
+@admin.register(models.TestResult)
+class TestResultAdmin(admin.ModelAdmin):
+    model = models.TestResult
 
-@admin.register(models.QuestionResault)
-class TestResaultAdmin(admin.ModelAdmin):
-    model = models.QuestionResault
+@admin.register(models.QuestionResult)
+class TestResultAdmin(admin.ModelAdmin):
+    model = models.QuestionResult

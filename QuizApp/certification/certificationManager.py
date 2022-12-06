@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from quiz.models import Test, Question, Answer
 from functools import wraps
-from .models import TestResault, QuestionResault
+from .models import TestResult, QuestionResult
 from typing import List
 import logging
 from django.http import Http404
@@ -71,7 +71,7 @@ class CertificationManager:
         logger.debug("User %s openes the certification", self._user)
 
         self._test = test
-        self._test_result = TestResault.objects.create(
+        self._test_result = TestResult.objects.create(
             test=self._test,
             user=self._user,
             is_open=True,
@@ -118,7 +118,7 @@ class CertificationManager:
 
         self._test_result.question_resaults.filter(question__id=question.id).delete()
         
-        qr = QuestionResault.objects.create(
+        qr = QuestionResult.objects.create(
             question=question,
         )
         qr.right_choices.set(question.answers.filter(is_right=True))

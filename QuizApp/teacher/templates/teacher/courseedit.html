@@ -5,9 +5,12 @@
     <h1>Редактирование курса: {{ course.name }}</h1>
 
     {% for test in tests %}
-    <a href="{% url 'testedit' test.id %}">{{test.name}}</a>
+    <a href="{% url 'testedit' course.id test.id %}">{{test.name}}</a>
     <br>
     {% endfor %}
     <br>
-    <a href="">Добавить тест</a>
+    <a href="{% url 'createtest' course.id %}">Добавить тест</a>
+
+    <br>
+    <a href="{% url 'teacherpage' %}">Вернуться на страницу преподавателя</a>
 {% endblock %}

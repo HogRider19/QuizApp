@@ -1,22 +1,23 @@
 services:
   db:
     image: postgres:15.1
+    container_name: postgres-quiz-cont
     volumes:
       - ./QuizApp/data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - ./.env
+    ports:
+      - "5432:5432"
   web:
     build: .
-    command: python QuizApp/manage.py runserver 0.0.0.0:8000
+    container_name: app-quiz-cont
+    command: bash -c "python QuizApp/manage.py migrate && python QuizApp/manage.py runserver 0.0.0.0:8000"
+    #command: python QuizApp/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
     ports:
       - "8000:8000"
-    environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - ./.env
     depends_on:
       - db

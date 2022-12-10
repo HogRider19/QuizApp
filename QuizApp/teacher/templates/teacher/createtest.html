@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Создание теста:</h1>
+    <form method="post" action="{% url 'createtest' course_id %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Создать</button>
+    </form>
+{% endblock %}

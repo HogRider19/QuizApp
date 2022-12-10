@@ -24,9 +24,6 @@ class LoginUser(View):
         login(request, user)
         return redirect('home')
 
-    class Meta:
-        pass
-
 
 class LogoutUser(View):
     def post(self, request):

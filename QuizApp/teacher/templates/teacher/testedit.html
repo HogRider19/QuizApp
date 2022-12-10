@@ -5,14 +5,23 @@
     <h1>Редактирование теста: {{ test.name }}</h1>
     <h3>Вопросы:</h3>
     {% for question in test.questions.all %}
-    <a href="{% url 'questionedit' question.id %}">{{question.description|truncatechars:100}}</a>
+    <a href="{% url 'questionedit' course_id test.id question.id %}">{{question.description|truncatechars:100}}</a>
     <br>
     {% endfor %}
     <br>
     <h3>Параметры:</h3>
-    <form action="{% url 'testedit' test.id %}" method="post">
+    <form action="{% url 'testedit' course_id test.id %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button>Отпраить</button>
     </form>
+
+    <br>
+    <a href="{% url 'createquestion' course_id test.id %}">Добавить вопрос</a>
+    <br>
+    <a href="{% url 'deletetest' test.id %}">Удалить тест</a>
+
+    <br>
+    <a href="{% url 'courseedit' course_id %}">Вернуться к редактированию курса</a>
+
 {% endblock %}

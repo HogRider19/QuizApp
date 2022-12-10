@@ -2,9 +2,14 @@
 
 
 {% block content %}
-    <form action="{% url 'questionedit' question.id %}" method="post">
+    <form action="{% url 'questionedit' course_id test_id question.id %}" method="post">
         {{form.as_p}}
         {% csrf_token %}
         <button>Отпраить</button>
     </form>
+
+    <br>
+    <a href="{% url 'deletequestion' object.id %}">Удалить вопрос</a>
+    <br>
+    <a href="{% url 'testedit' course_id test_id %}">Вернуться к редактированию теста</a>
 {% endblock %}

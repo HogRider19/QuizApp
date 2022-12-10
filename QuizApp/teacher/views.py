@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import View
 from django.views import generic
 from quiz.models import Course, Test, Question
@@ -43,6 +44,11 @@ class TestEditView(UserPassesTestMixin, generic.UpdateView):
     context_object_name = 'test'
     fields = ('name', 'description', 'at_start', 'at_finish')
 
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context.update({'course_id': self.kwargs['course_id']})
+        return context
+
     def test_func(self) -> Optional[bool]:
         is_pass = self.request.user in self.get_object().authors.all()
         logger.info('User %s attempts to access %s test. Result %s',
@@ -61,11 +67,82 @@ class QuestionEditView(UserPassesTestMixin, generic.UpdateView):
     context_object_name = 'question'
     fields = ('photo', 'description')
 
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context.update({'course_id': self.kwargs['course_id'],
+                        'test_id': self.kwargs['test_id']})
+        return context
+
     def test_func(self) -> Optional[bool]:
-        passed = self.request.user in self.get_object().authors.all()
+        passed = self.request.user == self.get_object(
+                            ).authors or self.get_object().authors is None
         logger.info('User %s attempts to access %s Question. Result %s',
                              self.request.user, self.get_object(), passed)
         return passed
 
     def get_success_url(self) -> str:
         return self.request.path
+
+class CreateQuestionView(UserPassesTestMixin, generic.CreateView):
+    model = Question
+    template_name = 'teacher/createquestion.html'
+    fields = ('photo', 'description',)
+    success_url = reverse_lazy('teacherpage')
+
+    def test_func(self) -> Optional[bool]:
+        passed = self.request.user in Test.objects.get(
+                        pk=self.kwargs['test_id']).authors.all()
+        return passed
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context.update({'course_id': self.kwargs['course_id'],
+                        'test_id': self.kwargs['test_id']})
+        return context
+
+    def form_valid(self, form):
+        fields = form.save(commit=False)
+        fields.authors = self.request.user
+        fields.test = Test.objects.get(pk=self.kwargs['test_id'])
+        fields.save()
+        return super().form_valid(form)
+
+class CreateTestView(UserPassesTestMixin, generic.CreateView):
+    model = Test
+    template_name = 'teacher/createtest.html'
+    fields = ('name', 'description', 'theory',
+              'success_percent', 'allotted_time',
+              'attempts_number', 'at_start', 'at_finish')
+    exclude = ('authors', 'courses',)
+    success_url = reverse_lazy('teacherpage')
+
+    def test_func(self) -> Optional[bool]:
+        passed = self.request.user in Course.objects.get(
+                        pk=self.kwargs['course_id']).teachers.all()
+        return passed
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context.update({'course_id': self.kwargs['course_id']})
+        return context
+
+    def form_valid(self, form):
+        fields = form.save(commit=False)
+        fields.save()
+        fields.courses.add(Course.objects.get(pk=self.kwargs['course_id']))
+        fields.authors.add(self.request.user)
+        return super().form_valid(form)
+
+class DeleteTestView(generic.DeleteView):
+    model = Test
+    template_name = 'teacher/deletetest.html' 
+    success_url = reverse_lazy('teacherpage')
+
+class DeleteQuestionView(generic.DeleteView):
+    model = Question
+    template_name = 'teacher/deletequestion.html'
+    success_url = reverse_lazy('teacherpage')
+
+
+
+

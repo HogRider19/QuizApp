@@ -1,4 +1,5 @@
 .env
+.env.dev
 .venv
 env/
 venv/
@@ -24,6 +25,8 @@ logs/debug.log
 *.log
 
 data
+
+media
 
 .vscode
 .vscode/

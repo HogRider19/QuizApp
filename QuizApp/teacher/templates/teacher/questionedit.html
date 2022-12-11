@@ -2,12 +2,30 @@
 
 
 {% block content %}
+    <h3>Ответы к вопросу:</h3>
+    {% for answer in object.answers.all %}
+        {% if answer.is_right %}
+            Верный:
+        {% else %}
+            Не верный:
+        {% endif %}
+        {{answer.description}}
+        <form method="post" action="{% url 'deleteanswer' answer.id %}">
+            {% csrf_token %}
+            <button>Удалить</button>
+        </form>
+        <br>
+    {% endfor %}
+    <h3>Вопрос:</h3>
+    <br>
     <form action="{% url 'questionedit' course_id test_id question.id %}" method="post">
         {{form.as_p}}
         {% csrf_token %}
         <button>Отпраить</button>
     </form>
 
+    <br>
+    <a href="{% url 'createanswer' object.id %}">Добавить вопрос</a>
     <br>
     <a href="{% url 'deletequestion' object.id %}">Удалить вопрос</a>
     <br>

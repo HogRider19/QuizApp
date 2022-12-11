@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views import generic
-from quiz.models import Course, Test, Question
+from quiz.models import Course, Test, Question, Answer
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from typing import *
@@ -21,6 +21,7 @@ class HomeTeacherPage(UserPassesTestMixin, generic.ListView):
     def get_queryset(self):
         return self.request.user.author_courses.all()
 
+
 class CourseEditView(UserPassesTestMixin, generic.DetailView):
     model = Course
     template_name = 'teacher/courseedit.html'
@@ -35,8 +36,9 @@ class CourseEditView(UserPassesTestMixin, generic.DetailView):
     def test_func(self) -> Optional[bool]:
         is_pass = self.request.user in self.get_object().teachers.all()
         logger.info('User %s attempts to access %s course. Result %s',
-                             self.request.user, self.get_object(), is_pass)
+                    self.request.user, self.get_object(), is_pass)
         return is_pass
+
 
 class TestEditView(UserPassesTestMixin, generic.UpdateView):
     model = Test
@@ -52,7 +54,7 @@ class TestEditView(UserPassesTestMixin, generic.UpdateView):
     def test_func(self) -> Optional[bool]:
         is_pass = self.request.user in self.get_object().authors.all()
         logger.info('User %s attempts to access %s test. Result %s',
-                             self.request.user, self.get_object(), is_pass)
+                    self.request.user, self.get_object(), is_pass)
         return is_pass
 
     def get_success_url(self) -> str:
@@ -60,6 +62,7 @@ class TestEditView(UserPassesTestMixin, generic.UpdateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
+
 
 class QuestionEditView(UserPassesTestMixin, generic.UpdateView):
     model = Question
@@ -75,13 +78,14 @@ class QuestionEditView(UserPassesTestMixin, generic.UpdateView):
 
     def test_func(self) -> Optional[bool]:
         passed = self.request.user == self.get_object(
-                            ).authors or self.get_object().authors is None
+        ).authors or self.get_object().authors is None
         logger.info('User %s attempts to access %s Question. Result %s',
-                             self.request.user, self.get_object(), passed)
+                    self.request.user, self.get_object(), passed)
         return passed
 
     def get_success_url(self) -> str:
         return self.request.path
+
 
 class CreateQuestionView(UserPassesTestMixin, generic.CreateView):
     model = Question
@@ -91,7 +95,7 @@ class CreateQuestionView(UserPassesTestMixin, generic.CreateView):
 
     def test_func(self) -> Optional[bool]:
         passed = self.request.user in Test.objects.get(
-                        pk=self.kwargs['test_id']).authors.all()
+            pk=self.kwargs['test_id']).authors.all()
         return passed
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
@@ -107,18 +111,18 @@ class CreateQuestionView(UserPassesTestMixin, generic.CreateView):
         fields.save()
         return super().form_valid(form)
 
+
 class CreateTestView(UserPassesTestMixin, generic.CreateView):
     model = Test
     template_name = 'teacher/createtest.html'
     fields = ('name', 'description', 'theory',
               'success_percent', 'allotted_time',
               'attempts_number', 'at_start', 'at_finish')
-    exclude = ('authors', 'courses',)
     success_url = reverse_lazy('teacherpage')
 
     def test_func(self) -> Optional[bool]:
         passed = self.request.user in Course.objects.get(
-                        pk=self.kwargs['course_id']).teachers.all()
+            pk=self.kwargs['course_id']).teachers.all()
         return passed
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
@@ -133,16 +137,58 @@ class CreateTestView(UserPassesTestMixin, generic.CreateView):
         fields.authors.add(self.request.user)
         return super().form_valid(form)
 
-class DeleteTestView(generic.DeleteView):
-    model = Test
-    template_name = 'teacher/deletetest.html' 
+
+class CreateAnswerView(UserPassesTestMixin, generic.CreateView):
+    model = Answer
+    template_name = 'teacher/createanswer.html'
+    fields = ('description', 'is_right')
     success_url = reverse_lazy('teacherpage')
 
-class DeleteQuestionView(generic.DeleteView):
+    def test_func(self) -> Optional[bool]:
+        passed = self.request.user == Question.objects.get(
+            pk=self.kwargs['question_id']).authors
+        return passed
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context.update({'question_id': self.kwargs['question_id']})
+        return context
+
+    def form_valid(self, form):
+        fields = form.save(commit=False)
+        fields.question = Question.objects.get(pk=self.kwargs['question_id'])
+        fields.save()
+        return super().form_valid(form)
+
+
+class DeleteTestView(UserPassesTestMixin, generic.DeleteView):
+    model = Test
+    template_name = 'teacher/deletetest.html'
+    success_url = reverse_lazy('teacherpage')
+
+    def test_func(self) -> Optional[bool]:
+        is_pass = self.request.user in self.get_object().authors.all()
+        return is_pass
+
+
+class DeleteQuestionView(UserPassesTestMixin, generic.DeleteView):
     model = Question
     template_name = 'teacher/deletequestion.html'
     success_url = reverse_lazy('teacherpage')
 
+    def test_func(self) -> Optional[bool]:
+        passed = self.request.user == self.get_object(
+        ).authors or self.get_object().authors
+        return passed
 
 
+class DeleteAnswerView(UserPassesTestMixin, View):
 
+    def post(self, request, pk):
+        Answer.objects.get(pk=pk).delete()
+        return redirect('teacherpage')
+
+    def test_func(self) -> Optional[bool]:
+        passed = self.request.user == Answer.objects.get(
+            pk=self.kwargs['pk']).question.authors
+        return passed

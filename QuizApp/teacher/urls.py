@@ -13,9 +13,12 @@ urlpatterns = [
                                 views.CreateQuestionView.as_view(), name='createquestion'),
     path('course/<int:course_id>/createtest/',
                                 views.CreateTestView.as_view(), name='createtest'),
+    path('question/<int:question_id>/createanswer/',
+                                views.CreateAnswerView.as_view(), name='createanswer'),
 
     path('deletetest/<int:pk>/', views.DeleteTestView.as_view(), name='deletetest'),
     path('deletequestion/<int:pk>/', views.DeleteQuestionView.as_view(), name='deletequestion'),
+    path('deleteanswer/<int:pk>/', views.DeleteAnswerView.as_view(), name='deleteanswer'),
 
     path('', views.HomeTeacherPage.as_view(), name='teacherpage'),
 ]

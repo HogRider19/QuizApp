@@ -35,7 +35,6 @@ class TestResult(models.Model):
     def close(self):
         success_percent = self.test.success_percent
         right_percent = self.get_right_percent()
-        allotted_time = self.test.allotted_time
 
         passed = True if right_percent > success_percent else False
 

@@ -142,6 +142,7 @@ class CertificationManager:
         return len(self._questions) - 1
 
     def _update_attrs_using_db(self):
+        """Подгружает данные из бд в объект"""
         logger.debug("User %s, Update attrs", self._user)
         if self.is_busy():
             self._test_result = self._user.user_results.get(is_open=True)
